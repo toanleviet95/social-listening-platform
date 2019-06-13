@@ -2,11 +2,32 @@
   "presets": [
     "next/babel"
   ],
-  "plugins": [
-    ["module-resolver", {
-      "alias": {
-        "@": "./",
-      }
-    }]
-  ]
+  "env": {
+    "development": {
+      "plugins": [
+        [
+          "module-resolver", {
+            "alias": {
+              "@": "./",
+            }
+          },
+        ],
+        "react-intl",
+      ]
+    },
+    "production": {
+      "plugins": [
+        [
+          "module-resolver", {
+            "alias": {
+              "@": "./",
+            }
+          },
+        ],
+        ["react-intl", {
+          "messagesDir": "lang/.messages/"
+        }],
+      ]
+    }
+  }
 }

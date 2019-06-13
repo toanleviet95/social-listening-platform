@@ -1,16 +1,17 @@
 import React, { Fragment } from 'react';
 import { Col, Row } from 'antd';
-import About from '@/components/profile/About/index';
-import Biography from '@/components/profile/Biography/index';
-import Events from '@/components/profile/Events/index';
-import Contact from '@/components/profile/Contact/index';
+import About from '@/components/Profile/About/index';
+import Biography from '@/components/Profile/Biography/index';
+import Events from '@/components/Profile/Events/index';
+import Contact from '@/components/Profile/Contact/index';
 import { friendList } from '@/data/profile';
 import { photoList } from '@/data/wall';
-import Friends from '@/components/profile/Friends/index';
-import Photos from '@/components/profile/Photos/index';
-import ProfileHeader from '@/components/profile/ProfileHeader/index';
+import Friends from '@/components/Profile/Friends/index';
+import Photos from '@/components/Profile/Photos/index';
+import ProfileHeader from '@/components/Profile/ProfileHeader/index';
 import Head from 'next/head';
 import CommonLayout from '@/layouts/CommonLayout';
+import withIntl from '@/hocs/withIntl';
 
 const Profile = () => (
   <CommonLayout>
@@ -45,4 +46,4 @@ const Profile = () => (
   </CommonLayout>
 );
 
-export default Profile;
+export default withIntl(Profile);
