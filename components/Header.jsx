@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Header = () => (<Link to="/">Home</Link>);
+const Header = () => (<Link href="/">Home</Link>);
 
 export default Header;

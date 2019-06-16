@@ -50,7 +50,7 @@ export class Sidebar extends Component {
     }
     return (
       <Sider
-        className={`gx-app-sidebar ${drawerStyle} ${themeType !== THEME_TYPE_LITE ? 'gx-layout-sider-dark' : null}`}
+        className={`gx-app-sidebar ${''} ${themeType !== THEME_TYPE_LITE ? 'gx-layout-sider-dark' : null}`}
         trigger={null}
         collapsed={(width < TAB_SIZE ? false : navStyle === NAV_STYLE_MINI_SIDEBAR || navStyle === NAV_STYLE_NO_HEADER_MINI_SIDEBAR)}
         theme={themeType === THEME_TYPE_LITE ? "lite" : "dark"}

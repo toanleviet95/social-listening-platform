@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Layout } from 'antd';
-import { defineMessages, injectIntl } from 'react-intl';
+import { injectIntl } from 'react-intl';
+import withIntl from '@/hocs/withIntl';
 
 import Sidebar from "@/components/Sidebar/index";
 import HorizontalDefault from "@/components/Topbar/HorizontalDefault/index";
@@ -119,4 +120,4 @@ const CommonLayout = injectIntl(({ intl, title, children }) => {
   );
 });
 
-export default CommonLayout;
+export default withIntl(CommonLayout);

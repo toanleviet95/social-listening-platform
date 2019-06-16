@@ -3,7 +3,6 @@ import React, {Component} from "react";
 
 // import {toggleCollapsedSideNav} from "../../../appRedux/actions/Setting";
 import { FormattedMessage } from "react-intl";
-import withIntl from '@/hocs/withIntl';
 
 class NoHeaderNotification extends Component {
 
@@ -35,4 +34,4 @@ class NoHeaderNotification extends Component {
 // };
 // export default connect(mapStateToProps, {toggleCollapsedSideNav})(NoHeaderNotification);
 
-export default withIntl(NoHeaderNotification);
+export default NoHeaderNotification;

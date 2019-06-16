@@ -1,6 +1,11 @@
 import App, { Container } from 'next/app'
 import React from 'react'
 import { IntlProvider, addLocaleData } from 'react-intl'
+import { Provider } from 'react-redux'
+import withRedux from 'next-redux-wrapper'
+import withReduxSaga from 'next-redux-saga'
+
+import createStore from '@/appRedux/store'
 
 // Register React Intl's locale data for the user's locale in the browser. This
 // locale data was added to the page by `pages/_document.js`. This only happens
@@ -11,8 +16,8 @@ if (typeof window !== 'undefined' && window.ReactIntlLocaleData) {
   })
 }
 
-export default class MyApp extends App {
-  static async getInitialProps ({ Component, router, ctx }) {
+class MyApp extends App {
+  static async getInitialProps ({ Component, ctx }) {
     let pageProps = {}
 
     if (Component.getInitialProps) {
@@ -29,7 +34,7 @@ export default class MyApp extends App {
   }
 
   render () {
-    const { Component, pageProps, locale, messages, initialNow } = this.props
+    const { Component, pageProps, locale, messages, initialNow, store} = this.props
 
     return (
       <Container>
@@ -38,9 +43,13 @@ export default class MyApp extends App {
           messages={messages}
           initialNow={initialNow}
         >
-          <Component {...pageProps} />
+          <Provider store={store}>
+            <Component {...pageProps} />
+          </Provider>
         </IntlProvider>
       </Container>
     )
   }
 }
+
+export default withRedux(createStore)(withReduxSaga(MyApp))

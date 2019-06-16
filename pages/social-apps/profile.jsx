@@ -11,7 +11,6 @@ import Photos from '@/components/Profile/Photos/index';
 import ProfileHeader from '@/components/Profile/ProfileHeader/index';
 import Head from 'next/head';
 import CommonLayout from '@/layouts/CommonLayout';
-import withIntl from '@/hocs/withIntl';
 
 const Profile = () => (
   <CommonLayout>
@@ -46,4 +45,4 @@ const Profile = () => (
   </CommonLayout>
 );
 
-export default withIntl(Profile);
+export default Profile;

@@ -13,7 +13,6 @@ import {TAB_SIZE} from "@/constants/ThemeSetting";
 import HorizontalNav from "../HorizontalNav";
 import Link from 'next/link';
 import { FormattedMessage } from "react-intl";
-import withIntl from '@/hocs/withIntl';
 
 const {Header} = Layout;
 
@@ -110,9 +109,9 @@ class AboveHeader extends Component {
                    }}
                 />
               </div>
-              <Link to="/" className="gx-d-block gx-d-lg-none gx-pointer gx-mr-xs-3 gx-pt-xs-1 gx-w-logo">
+              <Link href="/" className="gx-d-block gx-d-lg-none gx-pointer gx-mr-xs-3 gx-pt-xs-1 gx-w-logo">
                 <img alt="" src={'/static/images/w-logo.png'}/></Link>
-              <Link to="/" className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo">
+              <Link href="/" className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo">
                 <img alt="" src={'/static/images/logo.png'}/></Link>
               <div className="gx-header-search gx-d-none gx-d-lg-flex">
                 <SearchBox styleName="gx-lt-icon-search-bar-lg"
@@ -184,4 +183,4 @@ class AboveHeader extends Component {
 // };
 // export default connect(mapStateToProps, {toggleCollapsedSideNav, switchLanguage})(AboveHeader);
 
-export default withIntl(AboveHeader);
+export default AboveHeader;

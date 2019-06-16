@@ -58,7 +58,7 @@ class Topbar extends Component {
                 //  }}
               />
             </div> : null}
-          <Link to="/" className="gx-d-block gx-d-lg-none gx-pointer">
+          <Link href="/" className="gx-d-block gx-d-lg-none gx-pointer">
             <img alt="" src={'/static/images/w-logo.png'}/></Link>
 
           <SearchBox styleName="gx-d-none gx-d-lg-block gx-lt-icon-search-bar-lg"

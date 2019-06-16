@@ -12,7 +12,6 @@ import HorizontalNav from "../HorizontalNav";
 import Link from 'next/link';
 // import {switchLanguage, toggleCollapsedSideNav} from "../../../appRedux/actions/Setting";
 import { FormattedMessage } from "react-intl";
-import withIntl from '@/hocs/withIntl';
 
 const {Header} = Layout;
 
@@ -89,9 +88,9 @@ class InsideHeader extends Component {
                   //  }}
                 />
               </div>
-              <Link to="/" className="gx-d-block gx-d-lg-none gx-pointer gx-mr-xs-3 gx-pt-xs-1 gx-w-logo">
+              <Link href="/" className="gx-d-block gx-d-lg-none gx-pointer gx-mr-xs-3 gx-pt-xs-1 gx-w-logo">
                 <img alt="" src={'/static/images/w-logo.png'}/></Link>
-              <Link to="/" className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo">
+              <Link href="/" className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo">
                 <img alt="" src={'/static/images/logo.png'}/></Link>
 
               <div className="gx-header-horizontal-nav gx-header-horizontal-nav-curve gx-d-none gx-d-lg-block">
@@ -157,4 +156,4 @@ class InsideHeader extends Component {
 // };
 // export default connect(mapStateToProps, {toggleCollapsedSideNav, switchLanguage})(InsideHeader);
 
-export default withIntl(InsideHeader);
+export default InsideHeader;
