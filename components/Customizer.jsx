@@ -1,10 +1,10 @@
 import React, {Component, Fragment} from "react";
 import {Button, Drawer, Form, message, Radio} from "antd";
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 import ColorPicker from "./ColorPicker";
 import CustomScrollbars from "@/utils/CustomScrollbars";
-// import {onLayoutTypeChange, onNavStyleChange, setThemeColorSelection, setThemeType} from "appRedux/actions/Setting";
+import {onLayoutTypeChange, onNavStyleChange, setThemeColorSelection, setThemeType} from "@/appRedux/actions/Setting";
 
 import {
   BLUE,
@@ -422,15 +422,15 @@ class Customizer extends Component {
 
 Customizer = Form.create()(Customizer);
 
-// const mapStateToProps = ({settings}) => {
-//   const {themeType, width, colorSelection, navStyle, layoutType} = settings;
-//   return {themeType, width, colorSelection, navStyle, layoutType}
-// };
-// export default connect(mapStateToProps, {
-//   setThemeType,
-//   onLayoutTypeChange,
-//   setThemeColorSelection,
-//   onNavStyleChange
-// })(Customizer);
+const mapStateToProps = ({settings}) => {
+  const {themeType, width, colorSelection, navStyle, layoutType} = settings;
+  return {themeType, width, colorSelection, navStyle, layoutType}
+};
+export default connect(mapStateToProps, {
+  setThemeType,
+  onLayoutTypeChange,
+  setThemeColorSelection,
+  onNavStyleChange
+})(Customizer);
 
 export default Customizer;

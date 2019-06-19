@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Button, Dropdown, Icon, Layout, Menu, message, Popover, Select} from 'antd';
-// import {connect} from "react-redux";
+import {connect} from "react-redux";
 import CustomScrollbars from "@/utils/CustomScrollbars";
 
 import languageData from "@/data/language";
@@ -8,7 +8,7 @@ import SearchBox from "@/components/SearchBox";
 import UserInfo from "@/components/UserInfo";
 import AppNotification from "@/components/AppNotification";
 import MailNotification from "@/components/MailNotification";
-// import {switchLanguage, toggleCollapsedSideNav} from "../../../appRedux/actions/Setting";
+import {switchLanguage, toggleCollapsedSideNav} from "@/appRedux/actions/Setting";
 import HorizontalNav from "../HorizontalNav";
 import Link from 'next/link';
 import { FormattedMessage } from "react-intl";
@@ -180,10 +180,8 @@ class BelowHeader extends Component {
   }
 }
 
-// const mapStateToProps = ({settings}) => {
-//   const {locale, navCollapsed} = settings;
-//   return {locale, navCollapsed}
-// };
-// export default connect(mapStateToProps, {toggleCollapsedSideNav, switchLanguage})(BelowHeader);
-
-export default BelowHeader;
+const mapStateToProps = ({settings}) => {
+  const {locale, navCollapsed} = settings;
+  return {locale, navCollapsed}
+};
+export default connect(mapStateToProps, {toggleCollapsedSideNav, switchLanguage})(BelowHeader);

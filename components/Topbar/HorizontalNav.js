@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-// import {connect} from "react-redux";
+import {connect} from "react-redux";
 import {Menu} from "antd";
 import Link from 'next/link';
 import { FormattedMessage } from "react-intl";
@@ -918,11 +918,8 @@ class HorizontalNav extends Component {
 }
 
 HorizontalNav.propTypes = {};
-// const mapStateToProps = ({settings}) => {
-//   const {themeType, navStyle, pathname, locale} = settings;
-//   return {themeType, navStyle, pathname, locale}
-// };
-// export default connect(mapStateToProps)(HorizontalNav);
-
-export default HorizontalNav;
-
+const mapStateToProps = ({settings}) => {
+  const {themeType, navStyle, pathname, locale} = settings;
+  return {themeType, navStyle, pathname, locale}
+};
+export default connect(mapStateToProps)(HorizontalNav);

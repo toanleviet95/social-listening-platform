@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {Button, Dropdown, Icon, Layout, Menu, message, Popover, Select} from 'antd';
+import { connect } from 'react-redux';
 import CustomScrollbars from "@/utils/CustomScrollbars";
 
 import languageData from "@/data/language";
@@ -7,7 +8,7 @@ import SearchBox from "@/components/SearchBox";
 import UserInfo from "@/components/UserInfo";
 import AppNotification from "@/components/AppNotification";
 import MailNotification from "@/components/MailNotification";
-// import {switchLanguage, toggleCollapsedSideNav} from "../../../appRedux/actions/Setting";
+import {switchLanguage, toggleCollapsedSideNav} from "@/appRedux/actions/Setting";
 
 import {TAB_SIZE} from "@/constants/ThemeSetting";
 import HorizontalNav from "../HorizontalNav";
@@ -183,10 +184,8 @@ class AboveHeader extends Component {
   }
 }
 
-// const mapStateToProps = ({settings}) => {
-//   const {locale, navCollapsed, width} = settings;
-//   return {locale, navCollapsed, width}
-// };
-// export default connect(mapStateToProps, {toggleCollapsedSideNav, switchLanguage})(AboveHeader);
-
-export default AboveHeader;
+const mapStateToProps = ({settings}) => {
+  const {locale, navCollapsed, width} = settings;
+  return {locale, navCollapsed, width}
+};
+export default connect(mapStateToProps, {toggleCollapsedSideNav, switchLanguage})(AboveHeader);

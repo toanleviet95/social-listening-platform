@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Button, Dropdown, Icon, Layout, Menu, message, Popover, Select} from 'antd';
-// import {connect} from "react-redux";
+import {connect} from "react-redux";
 import CustomScrollbars from "@/utils/CustomScrollbars";
 
 import languageData from "@/data/language";
@@ -10,7 +10,7 @@ import AppNotification from "@/components/AppNotification";
 import MailNotification from "@/components/MailNotification";
 import Link from 'next/link';
 import HorizontalNav from "../HorizontalNav";
-// import {switchLanguage, toggleCollapsedSideNav} from "../../../appRedux/actions/Setting";
+import {switchLanguage, toggleCollapsedSideNav} from "@/appRedux/actions/Setting";
 import { FormattedMessage } from "react-intl";
 
 const {Header} = Layout;
@@ -181,10 +181,8 @@ class HorizontalDark extends Component {
   }
 }
 
-// const mapStateToProps = ({settings}) => {
-//   const {locale, navCollapsed} = settings;
-//   return {locale, navCollapsed}
-// };
-// export default connect(mapStateToProps, {toggleCollapsedSideNav, switchLanguage})(HorizontalDark);
-
-export default HorizontalDark;
+const mapStateToProps = ({settings}) => {
+  const {locale, navCollapsed} = settings;
+  return {locale, navCollapsed}
+};
+export default connect(mapStateToProps, {toggleCollapsedSideNav, switchLanguage})(HorizontalDark);

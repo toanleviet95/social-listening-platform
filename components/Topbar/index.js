@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import CustomScrollbars from "@/utils/CustomScrollbars";
 import languageData from "@/data/language";
-// import {switchLanguage, toggleCollapsedSideNav} from "../../appRedux/actions/Setting";
+import {switchLanguage, toggleCollapsedSideNav} from "@/appRedux/actions/Setting";
 import SearchBox from "@/components/SearchBox";
 import UserInfo from "@/components/UserInfo";
 import AppNotification from "@/components/AppNotification";
@@ -12,7 +12,7 @@ import MailNotification from "@/components/MailNotification";
 
 
 import {NAV_STYLE_DRAWER, NAV_STYLE_FIXED, NAV_STYLE_MINI_SIDEBAR, TAB_SIZE} from "@/constants/ThemeSetting";
-// import {connect} from "react-redux";
+import {connect} from "react-redux";
 
 const {Header} = Layout;
 
@@ -120,11 +120,9 @@ class Topbar extends Component {
   }
 }
 
-// const mapStateToProps = ({settings}) => {
-//   const {locale, navStyle, navCollapsed, width} = settings;
-//   return {locale, navStyle, navCollapsed, width}
-// };
+const mapStateToProps = ({settings}) => {
+  const {locale, navStyle, navCollapsed, width} = settings;
+  return {locale, navStyle, navCollapsed, width}
+};
 
-// export default connect(mapStateToProps, {toggleCollapsedSideNav, switchLanguage})(Topbar);
-
-export default Topbar;
+export default connect(mapStateToProps, {toggleCollapsedSideNav, switchLanguage})(Topbar);
