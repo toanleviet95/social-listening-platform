@@ -58,9 +58,11 @@ class Topbar extends Component {
                 //  }}
               />
             </div> : null}
-          <Link href="/" className="gx-d-block gx-d-lg-none gx-pointer">
-            <img alt="" src={'/static/images/w-logo.png'}/></Link>
-
+          <Link href="/">
+            <a className="gx-d-block gx-d-lg-none gx-pointer">
+              <img alt="" src={'/static/images/w-logo.png'}/>
+            </a>
+          </Link>
           <SearchBox styleName="gx-d-none gx-d-lg-block gx-lt-icon-search-bar-lg"
                      placeholder="Search in app..."
                      onChange={this.updateSearchChatUser.bind(this)}

@@ -13,7 +13,7 @@ import {
   THEME_TYPE_LITE
 } from "@/constants/ThemeSetting";
 import { FormattedMessage } from "react-intl";
-// import {connect} from "react-redux";
+import {connect} from "react-redux";
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -1123,10 +1123,8 @@ class SidebarContent extends Component {
 }
 
 SidebarContent.propTypes = {};
-// const mapStateToProps = ({settings}) => {
-//   const {navStyle, themeType, locale, pathname} = settings;
-//   return {navStyle, themeType, locale, pathname}
-// };
-// export default connect(mapStateToProps)(SidebarContent);
-
-export default SidebarContent;
+const mapStateToProps = ({settings}) => {
+  const {navStyle, themeType, locale, pathname} = settings;
+  return {navStyle, themeType, locale, pathname}
+};
+export default connect(mapStateToProps)(SidebarContent);

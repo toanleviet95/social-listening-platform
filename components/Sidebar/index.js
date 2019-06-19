@@ -1,9 +1,10 @@
 import React, {Component} from "react";
-// import {connect} from "react-redux";
+import {connect} from "react-redux";
 import {Drawer, Layout} from "antd";
 
 import SidebarContent from "./SidebarContent";
-// import {toggleCollapsedSideNav, updateWindowWidth} from "appRedux/actions/Setting";
+import {toggleCollapsedSideNav, updateWindowWidth} from "@/appRedux/actions/Setting";
+
 import {
   NAV_STYLE_DRAWER,
   NAV_STYLE_FIXED,
@@ -72,10 +73,8 @@ export class Sidebar extends Component {
   }
 }
 
-// const mapStateToProps = ({settings}) => {
-//   const {themeType, navStyle, navCollapsed, width, locale} = settings;
-//   return {themeType, navStyle, navCollapsed, width, locale}
-// };
-// export default connect(mapStateToProps, {toggleCollapsedSideNav, updateWindowWidth})(Sidebar);
-
-export default Sidebar;
+const mapStateToProps = ({settings}) => {
+  const {themeType, navStyle, navCollapsed, width, locale} = settings;
+  return {themeType, navStyle, navCollapsed, width, locale}
+};
+export default connect(mapStateToProps, {toggleCollapsedSideNav, updateWindowWidth})(Sidebar);

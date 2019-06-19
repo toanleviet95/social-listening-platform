@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-// import {connect} from "react-redux";
+import {connect} from "react-redux";
 import {Avatar, Popover} from "antd";
-// import {userSignOut} from "appRedux/actions/Auth";
+import {userSignOut} from "@/appRedux/actions/Auth";
 
 class UserProfile extends Component {
 
@@ -31,6 +31,4 @@ class UserProfile extends Component {
   }
 }
 
-// export default connect(null, {userSignOut})(UserProfile);
-
-export default UserProfile;
+export default connect(null, {userSignOut})(UserProfile);

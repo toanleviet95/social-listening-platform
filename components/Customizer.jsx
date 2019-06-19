@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from "react";
 import {Button, Drawer, Form, message, Radio} from "antd";
+// import { connect } from 'react-redux';
 
 import ColorPicker from "./ColorPicker";
 import CustomScrollbars from "@/utils/CustomScrollbars";

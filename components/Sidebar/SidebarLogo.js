@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-// import {connect} from "react-redux";
+import {connect} from "react-redux";
 import Link from 'next/link';
 
-// import {onNavStyleChange, toggleCollapsedSideNav} from "appRedux/actions/Setting";
+import {onNavStyleChange, toggleCollapsedSideNav} from "@/appRedux/actions/Setting";
 import {
   NAV_STYLE_DRAWER,
   NAV_STYLE_FIXED,
@@ -42,13 +42,14 @@ class SidebarLogo extends Component {
           />
         </div> : null}
 
-        <Link href="/" className="gx-site-logo">
-          {navStyle === NAV_STYLE_NO_HEADER_MINI_SIDEBAR && width >= TAB_SIZE ?
-            <img alt="" src={'/static/images/w-logo.png'}/> :
-            themeType === THEME_TYPE_LITE ?
-              <img alt="" src={'/static/images/logo-white.png'}/> :
-              <img alt="" src={'/static/images/logo.png'}/>}
-
+        <Link href="/">
+          <a className="gx-site-logo">
+            {navStyle === NAV_STYLE_NO_HEADER_MINI_SIDEBAR && width >= TAB_SIZE ?
+              <img alt="" src={'/static/images/w-logo.png'}/> :
+              themeType === THEME_TYPE_LITE ?
+                <img alt="" src={'/static/images/logo-white.png'}/> :
+                <img alt="" src={'/static/images/logo.png'}/>}
+          </a>
         </Link>
 
       </div>
@@ -56,14 +57,12 @@ class SidebarLogo extends Component {
   }
 }
 
-// const mapStateToProps = ({settings}) => {
-//   const {navStyle, themeType, width, navCollapsed} = settings;
-//   return {navStyle, themeType, width, navCollapsed}
-// };
+const mapStateToProps = ({settings}) => {
+  const {navStyle, themeType, width, navCollapsed} = settings;
+  return {navStyle, themeType, width, navCollapsed}
+};
 
-// export default connect(mapStateToProps, {
-//   onNavStyleChange,
-//   toggleCollapsedSideNav
-// })(SidebarLogo);
-
-export default SidebarLogo;
+export default connect(mapStateToProps, {
+  onNavStyleChange,
+  toggleCollapsedSideNav
+})(SidebarLogo);

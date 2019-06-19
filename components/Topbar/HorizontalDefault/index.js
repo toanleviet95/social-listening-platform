@@ -93,10 +93,16 @@ class HorizontalDefault extends Component {
                 />
 
               </div>
-              <Link href="/" className="gx-d-block gx-d-lg-none gx-pointer gx-w-logo">
-                <img alt="" src={'/static/images/w-logo.png'}/></Link>
-              <Link href="/" className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo">
-                <img alt="" src={'/static/images/logo-white.png'}/></Link>
+              <Link href="/">
+                <a className="gx-d-block gx-d-lg-none gx-pointer gx-w-logo">
+                  <img alt="" src={'/static/images/w-logo.png'}/>
+                </a>
+              </Link>
+              <Link href="/">
+                <a className="gx-d-none gx-d-lg-block gx-pointer gx-mr-xs-5 gx-logo">
+                  <img alt="" src={'/static/images/logo-white.png'}/>
+                </a>
+              </Link>
               <div className="gx-header-search gx-d-none gx-d-lg-flex">
                 <SearchBox styleName="gx-lt-icon-search-bar-lg"
                            placeholder="Search in app..."
