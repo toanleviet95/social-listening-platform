@@ -30,13 +30,13 @@ class SidebarLogo extends Component {
             className={`gx-icon-btn icon icon-${navStyle === NAV_STYLE_MINI_SIDEBAR ? 'menu-unfold' : 'menu-fold'} ${themeType !== THEME_TYPE_LITE ? 'gx-text-white' : ''}`}
             onClick={() => {
               if (navStyle === NAV_STYLE_DRAWER) {
-                // this.props.toggleCollapsedSideNav(!navCollapsed);
+                this.props.toggleCollapsedSideNav(!navCollapsed);
               } else if (navStyle === NAV_STYLE_FIXED) {
-                // this.props.onNavStyleChange(NAV_STYLE_MINI_SIDEBAR)
+                this.props.onNavStyleChange(NAV_STYLE_MINI_SIDEBAR);
               } else if (navStyle === NAV_STYLE_NO_HEADER_MINI_SIDEBAR) {
-                // this.props.toggleCollapsedSideNav(!navCollapsed);
+                this.props.toggleCollapsedSideNav(!navCollapsed);
               } else {
-                // this.props.onNavStyleChange(NAV_STYLE_FIXED)
+                this.props.onNavStyleChange(NAV_STYLE_FIXED);
               }
             }}
           />

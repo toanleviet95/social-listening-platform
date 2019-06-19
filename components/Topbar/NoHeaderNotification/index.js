@@ -12,9 +12,9 @@ class NoHeaderNotification extends Component {
       <div className="gx-no-header-horizontal">
         <div className="gx-d-block gx-d-lg-none gx-linebar gx-mr-xs-3">
           <i className="gx-icon-btn icon icon-menu"
-            //  onClick={() => {
-            //    this.props.toggleCollapsedSideNav(!navCollapsed);
-            //  }}
+             onClick={() => {
+               this.props.toggleCollapsedSideNav(!navCollapsed);
+             }}
           />
         </div>
         <div className="gx-no-header-horizontal-top">

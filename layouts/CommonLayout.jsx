@@ -29,6 +29,8 @@ import {
 
 import '@/styles/vendors/gaxon/styles.css';
 import '@/styles/vendors/react-notification/react-notifications.css';
+// import '@/styles/vendors/slick-carousel/slick.less';
+// import '@/styles/vendors/slick-carousel/slick-theme.less';
 import '@/styles/wieldy.less';
 
 const {Content, Footer} = Layout;

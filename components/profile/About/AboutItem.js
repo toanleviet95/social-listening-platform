@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 const AboutItem = ({data}) => {
   const {title, icon, desc, userList} = data;
   return (
-    <Fragment>
+    <>
       <div className="gx-media gx-flex-nowrap gx-mt-3 gx-mt-lg-4 gx-mb-2">
         <div className="gx-mr-3">
           <i className={`icon icon-${icon} gx-fs-xlxl gx-text-orange`}/>
@@ -14,7 +14,7 @@ const AboutItem = ({data}) => {
           {desc === '' ? null : <p className="gx-mb-0">{desc}</p>}
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 

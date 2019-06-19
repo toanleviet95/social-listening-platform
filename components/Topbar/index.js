@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from "react";
+import React, {Component} from "react";
 import {Layout, Popover} from "antd";
 import Link from 'next/link';
 
@@ -27,9 +27,9 @@ class Topbar extends Component {
       <ul className="gx-sub-popover">
         {languageData.map(language =>
           <li className="gx-media gx-pointer" key={JSON.stringify(language)}
-            // onClick={(e) =>
-            //   this.props.switchLanguage(language)
-            // }
+            onClick={(e) =>
+              this.props.switchLanguage(language)
+            }
           >
             <i className={`flag flag-24 gx-mr-2 flag-${language.icon}`}/>
             <span className="gx-language-text">{language.name}</span>
@@ -48,14 +48,14 @@ class Topbar extends Component {
   render() {
     const {locale, width, navCollapsed, navStyle} = this.props;
     return (
-      <Fragment>
+      <>
         <Header>
           {navStyle === NAV_STYLE_DRAWER || ((navStyle === NAV_STYLE_FIXED || navStyle === NAV_STYLE_MINI_SIDEBAR) && width < TAB_SIZE) ?
             <div className="gx-linebar gx-mr-3">
               <i className="gx-icon-btn icon icon-menu"
-                //  onClick={() => {
-                //    this.props.toggleCollapsedSideNav(!navCollapsed);
-                //  }}
+                 onClick={() => {
+                   this.props.toggleCollapsedSideNav(!navCollapsed);
+                 }}
               />
             </div> : null}
           <Link href="/">
@@ -79,7 +79,7 @@ class Topbar extends Component {
               </Popover>
             </li>
             {width >= TAB_SIZE ? null :
-              <Fragment>
+              <>
                 <li className="gx-notify">
                   <Popover overlayClassName="gx-popover-horizantal" placement="bottomRight" content={<AppNotification/>}
                            trigger="click">
@@ -96,7 +96,7 @@ class Topbar extends Component {
                   </span>
                   </Popover>
                 </li>
-              </Fragment>
+              </>
             }
             <li className="gx-language">
               <Popover overlayClassName="gx-popover-horizantal" placement="bottomRight" content={this.languageMenu()}
@@ -109,13 +109,13 @@ class Topbar extends Component {
               </Popover>
             </li>
             {width >= TAB_SIZE ? null :
-              <Fragment>
+              <>
                 <li className="gx-user-nav"><UserInfo/></li>
-              </Fragment>
+              </>
             }
           </ul>
         </Header>
-      </Fragment>
+      </>
     );
   }
 }

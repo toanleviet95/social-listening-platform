@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import CommonLayout from '@/layouts/CommonLayout';
-// import IntlLayout from '@/layouts/IntlLayout';
 import withIntl from '@/hocs/withIntl';
 
 const Index = () => (

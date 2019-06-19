@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from "react";
+import React, {Component} from "react";
 import {Button, Drawer, Form, message, Radio} from "antd";
 import { connect } from 'react-redux';
 
@@ -134,14 +134,14 @@ class Customizer extends Component {
   };
 
   onThemeTypeChange = (e) => {
-    // this.props.setThemeType(e.target.value);
+    this.props.setThemeType(e.target.value);
   };
   onColorSelectionTypeChange = (e) => {
-    // this.props.setThemeColorSelection(e.target.value);
+    this.props.setThemeColorSelection(e.target.value);
   };
 
   onNavStyleChange = (navStyle) => {
-    // this.props.onNavStyleChange(navStyle);
+    this.props.onNavStyleChange(navStyle);
   };
 
   getCustomizerContent = () => {
@@ -202,7 +202,7 @@ class Customizer extends Component {
   };
 
   handleLayoutTypes = (layoutType) => {
-    // this.props.onLayoutTypeChange(layoutType);
+    this.props.onLayoutTypeChange(layoutType);
   };
   getPresetColors = () => {
     const themeColor = Object.entries(this.state.vars) && Object.entries(this.state.vars)[0] && Object.entries(this.state.vars)[0][1] || '';
@@ -400,7 +400,7 @@ class Customizer extends Component {
 
 
     return (
-      <Fragment>
+      <>
         <Drawer
           placement="right"
           closable={false}
@@ -415,7 +415,7 @@ class Customizer extends Component {
             <i className="icon icon-setting fxicon-hc-spin gx-d-block"/>
           </Button>
         </div>
-      </Fragment>
+      </>
     );
   }
 }
@@ -432,5 +432,3 @@ export default connect(mapStateToProps, {
   setThemeColorSelection,
   onNavStyleChange
 })(Customizer);
-
-export default Customizer;

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Col, Row } from 'antd';
 import About from '@/components/Profile/About/index';
 import Biography from '@/components/Profile/Biography/index';
@@ -18,7 +18,7 @@ const Profile = () => (
       <title>Profile</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <Fragment>
+    <>
       <ProfileHeader />
       <div className="gx-profile-content">
         <Row>
@@ -41,7 +41,7 @@ const Profile = () => (
           </Col>
         </Row>
       </div>
-    </Fragment>
+    </>
   </CommonLayout>
 );
 

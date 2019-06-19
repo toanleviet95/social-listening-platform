@@ -43,9 +43,9 @@ class HorizontalDefault extends Component {
       <ul className="gx-sub-popover">
         {languageData.map(language =>
           <li className="gx-media gx-pointer" key={JSON.stringify(language)}
-            // onClick={(e) =>
-            //   this.props.switchLanguage(language)
-            // }
+            onClick={(e) =>
+              this.props.switchLanguage(language)
+            }
           >
             <i className={`flag flag-24 gx-mr-2 flag-${language.icon}`}/>
             <span className="gx-language-text">{language.name}</span>
@@ -87,9 +87,9 @@ class HorizontalDefault extends Component {
 
               <div className="gx-d-block gx-d-lg-none gx-linebar gx-mr-xs-3">
                 <i className="gx-icon-btn icon icon-menu"
-                  //  onClick={() => {
-                  //    this.props.toggleCollapsedSideNav(!navCollapsed);
-                  //  }}
+                   onClick={() => {
+                     this.props.toggleCollapsedSideNav(!navCollapsed);
+                   }}
                 />
 
               </div>

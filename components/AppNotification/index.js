@@ -1,11 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 import NotificationItem from "./NotificationItem";
 import {notifications} from "@/data/notifications";
 import CustomScrollbars from "@/utils/CustomScrollbars";
 
 const AppNotification = () => {
   return (
-    <Fragment>
+    <>
       <div className="gx-popover-header">
         <h3 className="gx-mb-0">Notifications</h3>
         <i className="gx-icon-btn icon icon-charvlet-down"/>
@@ -17,7 +17,7 @@ const AppNotification = () => {
           }
         </ul>
       </CustomScrollbars>
-    </Fragment>
+    </>
   )
 };
 

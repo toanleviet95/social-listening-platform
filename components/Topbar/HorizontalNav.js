@@ -150,12 +150,12 @@ class HorizontalNav extends Component {
                   <i className="icon icon-all-contacts"/>
                    <FormattedMessage id="sidebar.components.general"/>
               </span>}>
-            <Menu.Item key="components/general/button">
+            <Menu.Item key="@/components/general/button">
               <Link href="/components/general/button">
                 <FormattedMessage id="sidebar.general.button"/>
               </Link>
             </Menu.Item>
-            <Menu.Item key="components/general/icon">
+            <Menu.Item key="@/components/general/icon">
               <Link href="/components/general/icon">
                 <FormattedMessage id="sidebar.general.icon"/></Link>
             </Menu.Item>
@@ -166,32 +166,32 @@ class HorizontalNav extends Component {
                   <i className="icon icon-navigation"/>
                   <FormattedMessage id="sidebar.components.navigation"/>
               </span>}>
-            <Menu.Item key="components/navigation/affix">
+            <Menu.Item key="@/components/navigation/affix">
               <Link href="/components/navigation/affix">
                 <FormattedMessage
                   id="sidebar.navigation.affix"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/navigation/breadcrumb">
+            <Menu.Item key="@/components/navigation/breadcrumb">
               <Link href="/components/navigation/breadcrumb">
                 <FormattedMessage
                   id="sidebar.navigation.breadcrumb"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/navigation/dropdown">
+            <Menu.Item key="@/components/navigation/dropdown">
               <Link href="/components/navigation/dropdown">
                 <FormattedMessage
                   id="sidebar.navigation.dropdown"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/navigation/menu">
+            <Menu.Item key="@/components/navigation/menu">
               <Link href="/components/navigation/menu">
                 <FormattedMessage
                   id="sidebar.navigation.menu"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/navigation/pagination">
+            <Menu.Item key="@/components/navigation/pagination">
               <Link href="/components/navigation/pagination">
                 <FormattedMessage
                   id="sidebar.navigation.pagination"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/navigation/steps">
+            <Menu.Item key="@/components/navigation/steps">
               <Link href="/components/navigation/steps">
                 <FormattedMessage
                   id="sidebar.navigation.steps"/></Link>
@@ -203,87 +203,87 @@ class HorizontalNav extends Component {
                   <i className="icon icon-data-entry"/>
                   <FormattedMessage id="sidebar.components.dataEntry"/>
               </span>}>
-            <Menu.Item key="components/dataEntry/autoComplete">
+            <Menu.Item key="@/components/dataEntry/autoComplete">
               <Link href="/components/dataEntry/autoComplete">
                 <FormattedMessage
                   id="sidebar.dataEntry.autoComplete"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/checkbox">
+            <Menu.Item key="@/components/dataEntry/checkbox">
               <Link href="/components/dataEntry/checkbox">
                 <FormattedMessage
                   id="sidebar.dataEntry.checkbox"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/cascader">
+            <Menu.Item key="@/components/dataEntry/cascader">
               <Link href="/components/dataEntry/cascader">
                 <FormattedMessage
                   id="sidebar.dataEntry.cascader"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/datePicker">
+            <Menu.Item key="@/components/dataEntry/datePicker">
               <Link href="/components/dataEntry/datePicker">
                 <FormattedMessage
                   id="sidebar.dataEntry.datePicker"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/form">
+            <Menu.Item key="@/components/dataEntry/form">
               <Link href="/components/dataEntry/form">
                 <FormattedMessage
                   id="sidebar.dataEntry.form"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/inputNumber">
+            <Menu.Item key="@/components/dataEntry/inputNumber">
               <Link href="/components/dataEntry/inputNumber">
                 <FormattedMessage
                   id="sidebar.dataEntry.inputNumber"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/input">
+            <Menu.Item key="@/components/dataEntry/input">
               <Link href="/components/dataEntry/input">
                 <FormattedMessage
                   id="sidebar.dataEntry.input"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/mention">
+            <Menu.Item key="@/components/dataEntry/mention">
               <Link href="/components/dataEntry/mention">
                 <FormattedMessage
                   id="sidebar.dataEntry.mention"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/rate">
+            <Menu.Item key="@/components/dataEntry/rate">
               <Link href="/components/dataEntry/rate">
                 <FormattedMessage
                   id="sidebar.dataEntry.rate"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/radio">
+            <Menu.Item key="@/components/dataEntry/radio">
               <Link href="/components/dataEntry/radio">
                 <FormattedMessage
                   id="sidebar.dataEntry.radio"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/switch">
+            <Menu.Item key="@/components/dataEntry/switch">
               <Link href="/components/dataEntry/switch">
                 <FormattedMessage
                   id="sidebar.dataEntry.switch"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/slider">
+            <Menu.Item key="@/components/dataEntry/slider">
               <Link href="/components/dataEntry/slider">
                 <FormattedMessage
                   id="sidebar.dataEntry.slider"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/select">
+            <Menu.Item key="@/components/dataEntry/select">
               <Link href="/components/dataEntry/select">
                 <FormattedMessage
                   id="sidebar.dataEntry.select"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/treeSelect">
+            <Menu.Item key="@/components/dataEntry/treeSelect">
               <Link href="/components/dataEntry/treeSelect">
                 <FormattedMessage
                   id="sidebar.dataEntry.treeSelect"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/transfer">
+            <Menu.Item key="@/components/dataEntry/transfer">
               <Link href="/components/dataEntry/transfer">
                 <FormattedMessage
                   id="sidebar.dataEntry.transfer"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/timePicker">
+            <Menu.Item key="@/components/dataEntry/timePicker">
               <Link href="/components/dataEntry/timePicker">
                 <FormattedMessage
                   id="sidebar.dataEntry.timePicker"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataEntry/upload">
+            <Menu.Item key="@/components/dataEntry/upload">
               <Link href="/components/dataEntry/upload">
                 <FormattedMessage
                   id="sidebar.dataEntry.upload"/></Link>
@@ -297,67 +297,67 @@ class HorizontalNav extends Component {
                     <FormattedMessage id="sidebar.components.dataDisplay"/>
 
               </span>}>
-            <Menu.Item key="components/dataDisplay/avatar">
+            <Menu.Item key="@/components/dataDisplay/avatar">
               <Link href="/components/dataDisplay/avatar">
                 <FormattedMessage
                   id="sidebar.dataDisplay.avatar"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataDisplay/badge">
+            <Menu.Item key="@/components/dataDisplay/badge">
               <Link href="/components/dataDisplay/badge">
                 <FormattedMessage
                   id="sidebar.dataDisplay.badge"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataDisplay/collapse">
+            <Menu.Item key="@/components/dataDisplay/collapse">
               <Link href="/components/dataDisplay/collapse">
                 <FormattedMessage
                   id="sidebar.dataDisplay.collapse"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataDisplay/carousel">
+            <Menu.Item key="@/components/dataDisplay/carousel">
               <Link href="/components/dataDisplay/carousel">
                 <FormattedMessage
                   id="sidebar.dataDisplay.carousel"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataDisplay/card">
+            <Menu.Item key="@/components/dataDisplay/card">
               <Link href="/components/dataDisplay/card">
                 <FormattedMessage
                   id="sidebar.dataDisplay.card"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataDisplay/calendar">
+            <Menu.Item key="@/components/dataDisplay/calendar">
               <Link href="/components/dataDisplay/calendar">
                 <FormattedMessage
                   id="sidebar.dataDisplay.calender"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataDisplay/list">
+            <Menu.Item key="@/components/dataDisplay/list">
               <Link href="/components/dataDisplay/list">
                 <FormattedMessage
                   id="sidebar.dataDisplay.list"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataDisplay/popover">
+            <Menu.Item key="@/components/dataDisplay/popover">
               <Link href="/components/dataDisplay/popover">
                 <FormattedMessage
                   id="sidebar.dataDisplay.popover"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataDisplay/tree">
+            <Menu.Item key="@/components/dataDisplay/tree">
               <Link href="/components/dataDisplay/tree">
                 <FormattedMessage
                   id="sidebar.dataDisplay.tree"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataDisplay/tooltip">
+            <Menu.Item key="@/components/dataDisplay/tooltip">
               <Link href="/components/dataDisplay/tooltip">
                 <FormattedMessage
                   id="sidebar.dataDisplay.toolTips"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataDisplay/timeline">
+            <Menu.Item key="@/components/dataDisplay/timeline">
               <Link href="/components/dataDisplay/timeline">
                 <FormattedMessage
                   id="sidebar.dataDisplay.timeLine"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataDisplay/tag">
+            <Menu.Item key="@/components/dataDisplay/tag">
               <Link href="/components/dataDisplay/tag">
                 <FormattedMessage
                   id="sidebar.dataDisplay.tag"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/dataDisplay/tabs">
+            <Menu.Item key="@/components/dataDisplay/tabs">
               <Link href="/components/dataDisplay/tabs">
                 <FormattedMessage
                   id="sidebar.dataDisplay.tabs"/></Link>
@@ -370,37 +370,37 @@ class HorizontalNav extends Component {
                     <FormattedMessage id="sidebar.components.feedBack"/>
 
               </span>}>
-            <Menu.Item key="components/feedBack/alert">
+            <Menu.Item key="@/components/feedBack/alert">
               <Link href="/components/feedBack/alert">
                 <FormattedMessage
                   id="sidebar.feedBack.alert"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/feedBack/modal">
+            <Menu.Item key="@/components/feedBack/modal">
               <Link href="/components/feedBack/modal">
                 <FormattedMessage
                   id="sidebar.feedBack.modal"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/feedBack/message">
+            <Menu.Item key="@/components/feedBack/message">
               <Link href="/components/feedBack/message">
                 <FormattedMessage
                   id="sidebar.feedBack.message"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/feedBack/notification">
+            <Menu.Item key="@/components/feedBack/notification">
               <Link href="/components/feedBack/notification">
                 <FormattedMessage
                   id="sidebar.feedBack.notification"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/feedBack/progress">
+            <Menu.Item key="@/components/feedBack/progress">
               <Link href="/components/feedBack/progress">
                 <FormattedMessage
                   id="sidebar.feedBack.progress"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/feedBack/popconfirm">
+            <Menu.Item key="@/components/feedBack/popconfirm">
               <Link href="/components/feedBack/popconfirm">
                 <FormattedMessage id="sidebar.feedBack.popConfirm"/>
               </Link>
             </Menu.Item>
-            <Menu.Item key="components/feedBack/spin">
+            <Menu.Item key="@/components/feedBack/spin">
               <Link href="/components/feedBack/spin">
                 <FormattedMessage
                   id="sidebar.feedBack.spin"/></Link>
@@ -413,17 +413,17 @@ class HorizontalNav extends Component {
                     <FormattedMessage id="sidebar.components.other"/>
 
               </span>}>
-            <Menu.Item key="components/others/anchor">
+            <Menu.Item key="@/components/others/anchor">
               <Link href="/components/others/anchor">
                 <FormattedMessage
                   id="sidebar.other.anchor"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/others/backtop">
+            <Menu.Item key="@/components/others/backtop">
               <Link href="/components/others/backtop">
                 <FormattedMessage
                   id="sidebar.other.backTop"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/others/divider">
+            <Menu.Item key="@/components/others/divider">
               <Link href="/components/others/divider">
                 <FormattedMessage
                   id="sidebar.other.divider"/></Link>
@@ -438,12 +438,12 @@ class HorizontalNav extends Component {
                              <FormattedMessage id="sidebar.dataDisplay.table"/>
 
                          </span>}>
-            <Menu.Item key="components/table/basic">
+            <Menu.Item key="@/components/table/basic">
               <Link href="/components/table/basic">
                 <FormattedMessage
                   id="sidebar.view.basicTable"/></Link>
             </Menu.Item>
-            <Menu.Item key="components/table/data">
+            <Menu.Item key="@/components/table/data">
               <Link href="/components/table/data">
                 <FormattedMessage
                   id="sidebar.view.dataTable"/></Link>

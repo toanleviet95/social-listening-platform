@@ -20,12 +20,12 @@ const {Sider} = Layout;
 export class Sidebar extends Component {
 
   onToggleCollapsedNav = () => {
-    // this.props.toggleCollapsedSideNav(!this.props.navCollapsed);
+    this.props.toggleCollapsedSideNav(!this.props.navCollapsed);
   };
 
   componentDidMount() {
     window.addEventListener('resize', () => {
-      // this.props.updateWindowWidth(window.innerWidth)
+      this.props.updateWindowWidth(window.innerWidth)
     });
   }
 
